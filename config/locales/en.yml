@@ -7,6 +7,16 @@ en:
     pastes: pastes
     
   paste:
+    object: Paste
+    headers:
+      created: Pastes Created
+      details: Paste Details
+      actions: Actions
+    details:
+      name: Name
+      language: Filetype
+      size: Size
+      updated: Updated
     labels:
       language: Language
     buttons:
