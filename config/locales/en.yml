@@ -12,3 +12,5 @@ en:
     buttons:
       public: Create Public Paste
       private: Create Private Paste
+      save: Save Changes
+      cancel: Cancel
