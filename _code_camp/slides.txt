@@ -25,4 +25,18 @@ CODE PART
 
   6) create pastes/_form
   
-  7) 
+  7) --copy template--
+  
+  8) paste, let it enter with blank fields
+  
+  9) go over validation
+  
+      validates :title, :code, :language, :public, :presence => true
+      validates :language, :inclusion => Languages.map(&:second)
+
+  10) realize bug with public/private
+  
+  11) give scope/value to buttons
+  
+  12) make sure it is attr_protected!/attr_accessible
+  
