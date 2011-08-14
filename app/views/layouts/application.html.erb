@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Paste</title>
+    <%= stylesheet_link_tag    'application' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+    <div id='header' class='clearfix'>
+      <div class='container_12'>
+        <div class='grid_1'>
+          <h1>paste<span>code</span></h1>
+        </div>
+        <div id='menu' class='grid_11'>
+          <%= link_to t('menu.new'), '', :class => 'big button' %>
+          <%= link_to t('menu.pastes'), '', :class => 'big button' %>
+        </div>
+      </div>
+    </div>
+
+    <div id='content' class='container_12 clearfix'>
+      <%= yield %>
+    </div>
+
+  </body>
+</html>

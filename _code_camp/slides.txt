@@ -1,0 +1,7 @@
+1)
+  make sure to remove!
+    public/index.html
+    app/assets/images/rails.png
+    
+2) run rake db:create
+
