@@ -1,7 +1,7 @@
 Languages = [
   [:text, 'txt'],
-  [:ruby, 'rb'],
-  [:python, 'py'],
+  [:ruby, 'ruby'],
+  [:python, 'python'],
   [:css, 'css'],
   [:html, 'html']
 ]

@@ -43,4 +43,17 @@ h3{
   -moz-border-radius: 3px;
   }
   
-    
+dl{
+  color:#666;
+  margin-bottom:20px;
+  }
+  dt{
+    width:40%;
+    float:left;
+    font-weight:bold;
+    margin-bottom:10px;
+    }
+  dd{
+    text-align:right;
+    margin-bottom:10px;
+    }

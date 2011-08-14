@@ -1,25 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class='code_wrapper grid_9'>
+  <pre data-highlight="<%= @paste.language %>">
+<%= @paste.code %>
+  </pre>
+</div>
 
-<p>
-  <b>Title:</b>
-  <%= @paste.title %>
-</p>
+<div class='grid_3'>
+  <h3>Paste Details</h3>
+  <dl class='clearfix'>
+    <dt>Name:</dt>
+    <dd><%= @paste.title %></dd>
+    <dt>Size:</dt>
+    <dd><%= number_to_human_size @paste.code.size %></dd>
+    <dt>Updated:</dt>
+    <dd><%= time_ago_in_words @paste.updated_at %> ago</dd>
+  </dl>
 
-<p>
-  <b>Public:</b>
-  <%= @paste.public %>
-</p>
-
-<p>
-  <b>Language:</b>
-  <%= @paste.language %>
-</p>
-
-<p>
-  <b>Code:</b>
-  <%= @paste.code %>
-</p>
-
-
-<%= link_to 'Edit', edit_paste_path(@paste) %> |
-<%= link_to 'Back', pastes_path %>
+  <h3>Actions</h3>
+  <%= link_to t('paste.buttons.edit'), edit_paste_path(@paste), :class => 'button' %>
+  <%= link_to t('paste.buttons.delete'), paste_path(@paste), :method => :delete, :class => 'negative button', :confirm => t('paste.delete.confirm', :title => @paste.title) %>
+</div>
