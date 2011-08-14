@@ -24,7 +24,7 @@ class PastesController < ApplicationController
   # GET /pastes/private/1
   # GET /pastes/private/1.json
   def private
-    @paste = Paste.private.find(params[:id])
+    @paste = Paste.private.where(:token => params[:token]).first
 
     respond_to do |format|
       format.html { render :show }
@@ -56,7 +56,7 @@ class PastesController < ApplicationController
     
     respond_to do |format|
       if @paste.save
-        format.html { redirect_to @paste, notice: 'Paste was successfully created.' }
+        format.html { redirect_to path_to_paste, notice: 'Paste was successfully created.' }
         format.json { render json: @paste, status: :created, location: @paste }
       else
         format.html { render action: "new" }
@@ -72,7 +72,7 @@ class PastesController < ApplicationController
 
     respond_to do |format|
       if @paste.update_attributes(params[:paste])
-        format.html { redirect_to @paste, notice: 'Paste was successfully updated.' }
+        format.html { redirect_to path_to_paste, notice: 'Paste was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
@@ -91,5 +91,11 @@ class PastesController < ApplicationController
       format.html { redirect_to pastes_url }
       format.json { head :ok }
     end
+  end
+  
+private
+
+  def path_to_paste
+    @paste.public? ? @paste : private_paste_path(@paste.token)
   end
 end

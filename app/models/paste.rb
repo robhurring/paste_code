@@ -7,4 +7,12 @@ class Paste < ActiveRecord::Base
   
   scope :public, where(:public => true)
   scope :private, where(:public => false)
+  
+  before_create :create_token, :unless => :public?
+
+private
+
+  def create_token
+    write_attribute :token, ActiveSupport::SecureRandom.hex(5)
+  end
 end
