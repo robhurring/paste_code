@@ -4,4 +4,7 @@ class Paste < ActiveRecord::Base
   validates :public, :inclusion => [true, false]
   
   attr_accessible :title, :language, :code
+  
+  scope :public, where(:public => true)
+  scope :private, where(:public => false)
 end

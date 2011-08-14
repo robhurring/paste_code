@@ -13,10 +13,21 @@ class PastesController < ApplicationController
   # GET /pastes/1
   # GET /pastes/1.json
   def show
-    @paste = Paste.find(params[:id])
+    @paste = Paste.public.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
+      format.json { render json: @paste }
+    end
+  end
+  
+  # GET /pastes/private/1
+  # GET /pastes/private/1.json
+  def private
+    @paste = Paste.private.find(params[:id])
+
+    respond_to do |format|
+      format.html { render :show }
       format.json { render json: @paste }
     end
   end

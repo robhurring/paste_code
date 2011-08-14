@@ -1,5 +1,6 @@
 PasteCode::Application.routes.draw do
   resources :pastes
+  get 'pastes/private/:id(.:format)' => 'pastes#private'
 
   root :to => 'pastes#new'
   
