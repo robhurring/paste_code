@@ -1,0 +1,15 @@
+<%= div_for paste, :class => 'clearfix' do %>
+  <div class='meta clearfix'>
+    <div class='title grid_9'>
+      <%= link_to paste.title, paste %>
+    </div>
+    <div class='timestamp omega grid_3'>
+      <%= time_ago_in_words paste.updated_at %> ago
+    </div>
+  </div>
+
+  <div class='code grid_12'>
+    <%= paste.code.truncate 250 %>
+  </div>
+<% end %>
+

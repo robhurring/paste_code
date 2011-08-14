@@ -2,7 +2,7 @@ class PastesController < ApplicationController
   # GET /pastes
   # GET /pastes.json
   def index
-    @pastes = Paste.all
+    @pastes = Paste.public.all
 
     respond_to do |format|
       format.html # index.html.erb

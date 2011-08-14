@@ -1,29 +1,8 @@
-<h1>Listing pastes</h1>
+<div class='grid_9'>
+  <%= render @pastes %>
+</div>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Public</th>
-    <th>Language</th>
-    <th>Code</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @pastes.each do |paste| %>
-  <tr>
-    <td><%= paste.title %></td>
-    <td><%= paste.public %></td>
-    <td><%= paste.language %></td>
-    <td><%= paste.code %></td>
-    <td><%= link_to 'Show', paste %></td>
-    <td><%= link_to 'Edit', edit_paste_path(paste) %></td>
-    <td><%= link_to 'Destroy', paste, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Paste', new_paste_path %>
+<div class='grid_3'>
+  <h3>Pastes Created</h3>
+  <%= pluralize Paste.public.count, 'Paste' %>
+</div>
