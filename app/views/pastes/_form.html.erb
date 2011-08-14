@@ -38,7 +38,7 @@
           <%= button_tag %{<span class='icon user'></span>#{t 'paste.buttons.public'}}.html_safe, 
                 :name => 'scope', :value => 'public', :class => 'big' %>
         <% else %>
-          <%= link_to 'Cancel', :back, :class => 'negative big button' %>
+          <%= link_to t('paste.buttons.cancel'), :back, :class => 'negative big button' %>
           <%= button_tag %{<span class='icon check'></span>#{t 'paste.buttons.save'}}.html_safe, :class => 'big primary' %>
         <% end %>
       </div>
