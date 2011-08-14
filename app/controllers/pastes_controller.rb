@@ -2,7 +2,7 @@ class PastesController < ApplicationController
   # GET /pastes
   # GET /pastes.json
   def index
-    @pastes = Paste.public.all
+    @pastes = Paste.public.order('updated_at DESC').all
 
     respond_to do |format|
       format.html # index.html.erb
