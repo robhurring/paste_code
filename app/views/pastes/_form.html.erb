@@ -21,7 +21,7 @@
 
           <div class='language'>
             <label for='some_name'><%= t 'paste.labels.language' %></label>
-            <%= f.select :language, options_for_select(Languages.sort) %>
+            <%= f.select :language, options_for_select(Languages.sort, @paste.language || 'ruby') %>
           </div>
         </div>
 
