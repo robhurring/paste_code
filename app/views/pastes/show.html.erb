@@ -9,6 +9,8 @@
   <dl class='clearfix'>
     <dt>Name:</dt>
     <dd><%= @paste.title %></dd>
+    <dt>Filetype:</dt>
+    <dd><%= @paste.language %></dd>
     <dt>Size:</dt>
     <dd><%= number_to_human_size @paste.code.size %></dd>
     <dt>Updated:</dt>
