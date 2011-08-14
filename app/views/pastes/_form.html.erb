@@ -31,8 +31,11 @@
       </fieldset>
 
       <div class='form_buttons'>
-        <%= button_tag %{<span class='icon key'></span>#{t 'paste.buttons.private'}}.html_safe, :class => 'big positive' %>
-        <%= button_tag %{<span class='icon user'></span>#{t 'paste.buttons.public'}}.html_safe, :class => 'big' %>
+        <%= button_tag %{<span class='icon key'></span>#{t 'paste.buttons.private'}}.html_safe, 
+              :name => 'scope', :value => 'private', :class => 'big positive' %>
+              
+        <%= button_tag %{<span class='icon user'></span>#{t 'paste.buttons.public'}}.html_safe, 
+              :name => 'scope', :value => 'public', :class => 'big' %>
       </div>
     <% end %>
   </div>

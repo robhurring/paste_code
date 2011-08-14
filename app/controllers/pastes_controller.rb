@@ -41,9 +41,8 @@ class PastesController < ApplicationController
   # POST /pastes.json
   def create
     @paste = Paste.new(params[:paste])
+    @paste.public = params[:scope] == 'public'
     
-    raise params.inspect
-
     respond_to do |format|
       if @paste.save
         format.html { redirect_to @paste, notice: 'Paste was successfully created.' }
