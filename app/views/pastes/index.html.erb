@@ -3,6 +3,6 @@
 </div>
 
 <div class='grid_3'>
-  <h3>Pastes Created</h3>
-  <%= pluralize Paste.public.count, 'Paste' %>
+  <h3><%= t 'paste.headers.created' %></h3>
+  <%= pluralize Paste.public.count, t('paste.object') %>
 </div>
