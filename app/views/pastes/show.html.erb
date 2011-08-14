@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @paste.title %>
+</p>
+
+<p>
+  <b>Public:</b>
+  <%= @paste.public %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @paste.language %>
+</p>
+
+<p>
+  <b>Code:</b>
+  <%= @paste.code %>
+</p>
+
+
+<%= link_to 'Edit', edit_paste_path(@paste) %> |
+<%= link_to 'Back', pastes_path %>

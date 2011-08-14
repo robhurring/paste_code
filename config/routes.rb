@@ -1,5 +1,7 @@
 PasteCode::Application.routes.draw do
-  root :to => 'home#index'
+  resources :pastes
+
+  root :to => 'pastes#new'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

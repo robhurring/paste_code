@@ -1,7 +1,28 @@
-1)
-  make sure to remove!
-    public/index.html
-    app/assets/images/rails.png
-    
-2) run rake db:create
+BEFORE PART
 
+  * walk through folders
+
+  * talk about MVC
+
+  * talk about localizations
+
+  * talk about routes
+
+CODE PART
+
+  1)
+    make sure to remove!
+      public/index.html
+      app/assets/images/rails.png
+    
+  2) run rake db:create
+
+  3) rails g scaffold paste title:string public:boolean language:string code:text
+
+  4) db:migrate
+
+  5) route root => pastes#new
+
+  6) create pastes/_form
+  
+  7) 
