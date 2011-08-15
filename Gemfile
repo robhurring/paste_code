@@ -4,6 +4,10 @@ gem 'rails', '3.1.0.rc5'
 gem 'mysql2'
 gem 'jquery-rails'
 
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+end
+
 group :development do
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'passenger'
